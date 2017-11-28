@@ -59,17 +59,19 @@ Path of the `CurrentTime.pm` and all other scripts:
 
 Compile the C code:
 
+`CFLAGS="-O3" CXXFLAGS="-O3" ./configure -prefix=/usr/local/apache2 -enable-autoindex -enable-cache -enable-cgi -enable-deflate -enable-dir -enable-disk_cache -enable-fastcgi -enable-file_cache -enable-headers -enable-include -enable-info -enable-log_config -enable-log_forensic -enable-logio -enable-mem_cache -enable-mime -enable-mime_magic -enable-negotiation -enable-perl -enable-proxy -enable-proxy-balancer -enable-proxy-http -enable-rewrite -enable-speling -enable-status -enable-suexec -enable-userdir -enable-usertrack -enable-version -enable-vhost_alias -enable-so -enable-mods-shared=all --enable--hello`
+
+Then:
+
 ```bash
-CFLAGS="-O3" CXXFLAGS="-O3" ./configure -prefix=/usr/local/apache2 -enable-autoindex -enable-cache -enable-cgi -enable-deflate -enable-dir -enable-disk_cache -enable-fastcgi -enable-file_cache -enable-headers -enable-include -enable-info -enable-log_config -enable-log_forensic -enable-logio -enable-mem_cache -enable-mime -enable-mime_magic -enable-negotiation -enable-perl -enable-proxy -enable-proxy-balancer -enable-proxy-http -enable-rewrite -enable-speling -enable-status -enable-suexec -enable-userdir -enable-usertrack -enable-version -enable-vhost_alias -enable-so -enable-mods-shared=all --enable--hello
-
 make
-
 sudo make install
-
 ```
 
 Add the module to the `httpd.conf`:
 
 ```xml
-<Location "/hello-c-module">                                                                        SetHandler hello                                                                            </Location> 
+<Location "/hello-c-module">
+     SetHandler hello
+</Location>
 ```
