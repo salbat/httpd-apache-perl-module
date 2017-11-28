@@ -1,11 +1,15 @@
 # httpd-apache-perl-module
 httpd/Apache2 Module in Perl
 
+## httpd/Apache2 Setup
+
 Download and extract httpd2.2:
 ```bash
 curl -O https://archive.apache.org/dist/httpd/httpd-2.2.11.tar.gz
 tar zxvf httpd-2.2.11.tar.gz
 ```
+
+## mod_perl Setup
 
 Download and extract mod_perl-2.0.10:
 ```bash
@@ -44,15 +48,14 @@ chmod a+x /usr/local/apache2/cgi-bin/*
 sudo vim /usr/local/apache2/cgi-bin/test.pl
 ```
 
+## Perl Module
 
 Path of the `CurrentTime.pm` and all other scripts:
 ```bash
 /usr/local/apache2/lib/perl/Apache/*.pm
 ```
 
-#H2 Perl Module
-
-#H2 C Module
+## C Module
 
 Compile the C code:
 
