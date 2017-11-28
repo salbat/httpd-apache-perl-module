@@ -1,11 +1,13 @@
 # httpd-apache-perl-module
 httpd/Apache2 Module in Perl
 
+```bash
 curl -O https://archive.apache.org/dist/httpd/httpd-2.2.11.tar.gz
-10030  tar zxvf httpd-2.2.11.tar.gz\n
-10031  cd httpd-2.2.11
+tar zxvf httpd-2.2.11.tar.gz
+
 curl -O http://apache.mirror.amaze.com.au/perl/mod_perl-2.0.10.tar.gz
 tar xzvf mod_perl-2.0.10.tar.gz
+
 sudo perl Makefile.PL MP_CCOPTS=-std=gnu89 MP_APXS=/usr/local/apache2/bin/apxs
 make
 sudo make install
@@ -20,3 +22,4 @@ ls /usr/local/apache2/cgi-bin
 tail -f /usr/local/apache2/logs/error_log
 chmod a+x /usr/local/apache2/cgi-bin/*
 sudo vim /usr/local/apache2/cgi-bin/test.pl
+```
