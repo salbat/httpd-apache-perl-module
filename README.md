@@ -22,14 +22,30 @@ sudo make install
 Test httpd/mod_perl and verify CGI scripts:
 ```bash
 sudo vim /usr/local/apache2/conf/httpd.conf
+
 /usr/local/apache2/bin/apachectl configtest
+
 sudo /usr/local/apache2/bin/apachectl start
+
 telnet localhost 80
+
 vim /usr/local/apache2/cgi-bin/
+
 vim /usr/local/apache2/cgi-bin/test.pl
+
 sudo chmod a+rx  /usr/local/apache2/cgi-bin/test.pl
+
 ls /usr/local/apache2/cgi-bin
+
 tail -f /usr/local/apache2/logs/error_log
+
 chmod a+x /usr/local/apache2/cgi-bin/*
+
 sudo vim /usr/local/apache2/cgi-bin/test.pl
+```
+
+
+Path of the `CurrentTime.pm` and all other scripts:
+```bash
+/usr/local/apache2/lib/perl/Apache/*.pm
 ```
